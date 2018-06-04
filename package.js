@@ -1,13 +1,13 @@
 Package.describe({
-  name: "u2622:persistent-session",
-  version: "0.4.4",
-  summary: "Persistently store Session data on the client",
-  git: "https://github.com/okgrow/meteor-persistent-session"
+  name: "hubroedu:persistent-session",
+  version: "0.5",
+  summary: "Persistently store Session data on the client, without jquery",
+  git: "https://github.com/hubroedu/meteor-persistent-session"
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('0.9.1'),
-  api.use(['jquery', 'amplify', 'tracker', 'reactive-dict', 'session', 'underscore', 'ejson']);
+  api.use(['amplify', 'tracker', 'reactive-dict', 'session', 'underscore', 'ejson']);
   // If `accounts-base` is loaded, we have to make sure that this package is
   // loaded after `accounts-base` is, so we specify `weak: true` here
   api.use('accounts-base', { weak: true });
@@ -21,7 +21,7 @@ Package.onTest(function (api) {
   api.use("random");
   api.use("underscore");
   api.use("reactive-dict"); // we only need this exposed for testing
-  api.use("u2622:persistent-session");
+  api.use("hubroedu:persistent-session");
 
   // expose for derping around in console
   api.export('PersistentSession', ['client']);

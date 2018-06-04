@@ -1,6 +1,7 @@
-This project is UNSUPPORTED!
-===========================
-We are no longer supporting the development of this package. __Use at your own risk!__
+Persistent session without jQuery
+=========
+
+Forked from `okgrow/meteor-persistent-session` to remove the jquery dependency.
 
 
 Purpose
